@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class LoginViewModel: ObservableObject {
+class UserViewModel: ObservableObject {
     
     @Published var username: String = ""
     @Published var password: String = ""
@@ -21,7 +21,10 @@ class LoginViewModel: ObservableObject {
     
     init(validationService: ValidationServiceType) {
         self.validationService = validationService
-        
+        setupBinding()
+    }
+    
+    private func setupBinding(){
         $username
             .dropFirst()
             .flatMap { [unowned self] username in
@@ -46,19 +49,10 @@ class LoginViewModel: ObservableObject {
     }
     
     private func validateUsername(_ username: String) -> AnyPublisher<ValidationResult, Never> {
-        if username.isEmpty {
-            return Just(.failure(ValidationConstants.Messages.username)).eraseToAnyPublisher()
-        }
-        if CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: username)) {
-            return Just(.failure(ValidationConstants.Messages.username)).eraseToAnyPublisher()
-        }
         return validationService.validateUsername(username)
     }
     
     private func validatePassword(_ password: String) -> AnyPublisher<ValidationResult, Never> {
-        if password.isEmpty {
-            return Just(.failure(ValidationConstants.Messages.password)).eraseToAnyPublisher()
-        }
         return validationService.validatePassword(password)
     }
     

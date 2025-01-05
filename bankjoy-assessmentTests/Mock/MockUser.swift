@@ -18,8 +18,8 @@ extension User {
     
     static func mockInvalidUsername() -> User {
         return User(
-            username: "user",
-            password: "ValidPassword123!"
+            username: "",
+            password: "$Adm1n!@205455"
         )
     }
     
@@ -69,6 +69,20 @@ extension User {
         return User(
             username: "",
             password: ""
+        )
+    }
+    
+    static func mockUserNameWithSpecialCharacters() -> User {
+        return User(
+            username: "$Adm1n!@2024",
+            password: "$Adm1n!@2024"
+        )
+    }
+    
+    static func mockPasswordWithOnlyNumbers() -> User {
+        return User(
+            username: "validUser",
+            password: "1234567890"
         )
     }
     

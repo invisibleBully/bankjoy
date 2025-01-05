@@ -10,7 +10,7 @@ import Combine
 
 class LoginViewController: UIViewController {
     
-    private var viewModel: LoginViewModel
+    private var viewModel: UserViewModel
     private var cancellables = Set<AnyCancellable>()
     
     private let usernameTextField: UITextField = {
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         return label
     }()
     
-    init(viewModel: LoginViewModel) {
+    init(viewModel: UserViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -77,7 +77,7 @@ class LoginViewController: UIViewController {
     
     private func bindViewModel() {
         viewModel.$isUsernameValid
-            .dropFirst() // Ignore initial value
+            .dropFirst()
             .sink { [weak self] isValid in
                 guard let self = self else { return }
                 self.usernameTextField.layer.borderColor = isValid ? UIColor.green.cgColor : UIColor.red.cgColor
@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
             .store(in: &cancellables)
         
         viewModel.$isPasswordValid
-            .dropFirst() // Ignore initial value
+            .dropFirst()
             .sink { [weak self] isValid in
                 guard let self = self else { return }
                 self.passwordTextField.layer.borderColor = isValid ? UIColor.green.cgColor : UIColor.red.cgColor
@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
             .store(in: &cancellables)
         
         viewModel.$alertMessage
-            .dropFirst() // Ignore initial value
+            .dropFirst()
             .sink { [weak self] alertMessage in
                 guard let self = self else { return }
                 self.alertLabel.text = alertMessage
@@ -105,9 +105,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func textFieldChanged(_ textField: UITextField) {
-        if textField == usernameTextField {
+        if textField === usernameTextField {
             viewModel.username = textField.text ?? ""
-        } else if textField == passwordTextField {
+        } else if textField === passwordTextField {
             viewModel.password = textField.text ?? ""
         }
     }

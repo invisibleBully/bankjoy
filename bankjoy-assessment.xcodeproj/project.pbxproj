@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C22BB632D2B04A200E8F3A2 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22BB622D2B04A200E8F3A2 /* ValidationServiceTests.swift */; };
 		2C7805582D2A3E3500418A04 /* MockValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805552D2A3E3500418A04 /* MockValidationService.swift */; };
 		2C78056C2D2A3E3E00418A04 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805592D2A3E3E00418A04 /* AppCoordinator.swift */; };
 		2C78056D2D2A3E3E00418A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78055A2D2A3E3E00418A04 /* AppDelegate.swift */; };
 		2C78056E2D2A3E3E00418A04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78055B2D2A3E3E00418A04 /* SceneDelegate.swift */; };
 		2C78056F2D2A3E3E00418A04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78055E2D2A3E3E00418A04 /* User.swift */; };
-		2C7805702D2A3E3E00418A04 /* LoginValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805602D2A3E3E00418A04 /* LoginValidationService.swift */; };
+		2C7805702D2A3E3E00418A04 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805602D2A3E3E00418A04 /* ValidationService.swift */; };
 		2C7805712D2A3E3E00418A04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805612D2A3E3E00418A04 /* LoginViewController.swift */; };
-		2C7805722D2A3E3E00418A04 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805622D2A3E3E00418A04 /* LoginViewModel.swift */; };
+		2C7805722D2A3E3E00418A04 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805622D2A3E3E00418A04 /* UserViewModel.swift */; };
 		2C7805732D2A3E3E00418A04 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805632D2A3E3E00418A04 /* Validator.swift */; };
 		2C7805742D2A3E3E00418A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7805662D2A3E3E00418A04 /* Assets.xcassets */; };
 		2C7805752D2A3E3E00418A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7805682D2A3E3E00418A04 /* LaunchScreen.storyboard */; };
 		2C78057A2D2A3E4700418A04 /* bankjoy_assessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805772D2A3E4700418A04 /* bankjoy_assessmentUITests.swift */; };
 		2C78057B2D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805782D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift */; };
-		2C78057D2D2A3EFB00418A04 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78057C2D2A3EFB00418A04 /* UITextField+Extension.swift */; };
-		2C78057F2D2A400D00418A04 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78057E2D2A400D00418A04 /* LoginViewModelTests.swift */; };
+		2C78057F2D2A400D00418A04 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78057E2D2A400D00418A04 /* UserViewModelTests.swift */; };
 		2C7805852D2A50C900418A04 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805842D2A50C900418A04 /* MockUser.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C22BB622D2B04A200E8F3A2 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		2C73330A2D2A24A600A943F3 /* bankjoy-assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankjoy-assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7333202D2A24A800A943F3 /* bankjoy-assessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bankjoy-assessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C73332A2D2A24A800A943F3 /* bankjoy-assessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bankjoy-assessmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,17 +52,16 @@
 		2C78055A2D2A3E3E00418A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C78055B2D2A3E3E00418A04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C78055E2D2A3E3E00418A04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2C7805602D2A3E3E00418A04 /* LoginValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationService.swift; sourceTree = "<group>"; };
+		2C7805602D2A3E3E00418A04 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		2C7805612D2A3E3E00418A04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2C7805622D2A3E3E00418A04 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2C7805622D2A3E3E00418A04 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2C7805632D2A3E3E00418A04 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2C7805662D2A3E3E00418A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7805672D2A3E3E00418A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C78056A2D2A3E3E00418A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C7805772D2A3E4700418A04 /* bankjoy_assessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankjoy_assessmentUITests.swift; sourceTree = "<group>"; };
 		2C7805782D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankjoy_assessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2C78057C2D2A3EFB00418A04 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		2C78057E2D2A400D00418A04 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		2C78057E2D2A400D00418A04 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		2C7805812D2A436000418A04 /* bankjoy-assessment.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bankjoy-assessment.xctestplan"; sourceTree = "<group>"; };
 		2C7805842D2A50C900418A04 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C22BB612D2A74FB00E8F3A2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805632D2A3E3E00418A04 /* Validator.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		2C7333012D2A24A500A943F3 = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +120,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C7805542D2A3E3500418A04 /* LoginTests */ = {
+		2C7805542D2A3E3500418A04 /* ViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C78057E2D2A400D00418A04 /* LoginViewModelTests.swift */,
+				2C78057E2D2A400D00418A04 /* UserViewModelTests.swift */,
+				2C22BB622D2B04A200E8F3A2 /* ValidationServiceTests.swift */,
 			);
-			path = LoginTests;
+			path = ViewModelTests;
 			sourceTree = "<group>";
 		};
 		2C7805562D2A3E3500418A04 /* Mock */ = {
@@ -132,7 +141,7 @@
 		2C7805572D2A3E3500418A04 /* bankjoy-assessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C7805542D2A3E3500418A04 /* LoginTests */,
+				2C7805542D2A3E3500418A04 /* ViewModelTests */,
 				2C7805562D2A3E3500418A04 /* Mock */,
 			);
 			path = "bankjoy-assessmentTests";
@@ -148,14 +157,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		2C78055D2D2A3E3E00418A04 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				2C78057C2D2A3EFB00418A04 /* UITextField+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		2C78055F2D2A3E3E00418A04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,21 +165,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2C7805642D2A3E3E00418A04 /* Login */ = {
+		2C7805642D2A3E3E00418A04 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				2C7805602D2A3E3E00418A04 /* LoginValidationService.swift */,
+				2C7805602D2A3E3E00418A04 /* ValidationService.swift */,
 				2C7805612D2A3E3E00418A04 /* LoginViewController.swift */,
-				2C7805622D2A3E3E00418A04 /* LoginViewModel.swift */,
-				2C7805632D2A3E3E00418A04 /* Validator.swift */,
+				2C7805622D2A3E3E00418A04 /* UserViewModel.swift */,
 			);
-			path = Login;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		2C7805652D2A3E3E00418A04 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				2C7805642D2A3E3E00418A04 /* Login */,
+				2C7805642D2A3E3E00418A04 /* Authentication */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -197,10 +197,10 @@
 			children = (
 				2C78056A2D2A3E3E00418A04 /* Info.plist */,
 				2C78055C2D2A3E3E00418A04 /* Application */,
-				2C78055D2D2A3E3E00418A04 /* Extension */,
 				2C78055F2D2A3E3E00418A04 /* Model */,
 				2C7805652D2A3E3E00418A04 /* Module */,
 				2C7805692D2A3E3E00418A04 /* Resource */,
+				2C22BB612D2A74FB00E8F3A2 /* Util */,
 			);
 			path = "bankjoy-assessment";
 			sourceTree = "<group>";
@@ -351,14 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C78057D2D2A3EFB00418A04 /* UITextField+Extension.swift in Sources */,
 				2C78056C2D2A3E3E00418A04 /* AppCoordinator.swift in Sources */,
 				2C78056D2D2A3E3E00418A04 /* AppDelegate.swift in Sources */,
 				2C78056E2D2A3E3E00418A04 /* SceneDelegate.swift in Sources */,
 				2C78056F2D2A3E3E00418A04 /* User.swift in Sources */,
-				2C7805702D2A3E3E00418A04 /* LoginValidationService.swift in Sources */,
+				2C7805702D2A3E3E00418A04 /* ValidationService.swift in Sources */,
 				2C7805712D2A3E3E00418A04 /* LoginViewController.swift in Sources */,
-				2C7805722D2A3E3E00418A04 /* LoginViewModel.swift in Sources */,
+				2C7805722D2A3E3E00418A04 /* UserViewModel.swift in Sources */,
 				2C7805732D2A3E3E00418A04 /* Validator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,8 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C78057F2D2A400D00418A04 /* LoginViewModelTests.swift in Sources */,
+				2C78057F2D2A400D00418A04 /* UserViewModelTests.swift in Sources */,
 				2C7805852D2A50C900418A04 /* MockUser.swift in Sources */,
+				2C22BB632D2B04A200E8F3A2 /* ValidationServiceTests.swift in Sources */,
 				2C7805582D2A3E3500418A04 /* MockValidationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

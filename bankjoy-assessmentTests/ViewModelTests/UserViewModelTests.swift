@@ -9,16 +9,16 @@ import XCTest
 import Combine
 @testable import bankjoy_assessment
 
-class LoginViewModelTests: XCTestCase {
+class UserViewModelTests: XCTestCase {
     
-    var viewModel: LoginViewModel!
+    var viewModel: UserViewModel!
     var cancellables: Set<AnyCancellable>!
     
     override func setUp() {
         super.setUp()
         let mockValidator = MockValidator()
         let mockValidationService = MockValidationService(validator: mockValidator)
-        viewModel = LoginViewModel(validationService: mockValidationService)
+        viewModel = UserViewModel(validationService: mockValidationService)
         cancellables = []
     }
     
@@ -118,4 +118,25 @@ class LoginViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.isPasswordValid)
         XCTAssertEqual(viewModel.alertMessage, "Your username and password are incorrect. Please, try again.")
     }
+    
+    func testUsernameWithSpecialCharacters() {
+        let user = User.mockUserNameWithSpecialCharacters()
+        viewModel.username = user.username
+        viewModel.password = user.password
+        
+        XCTAssertFalse(viewModel.isUsernameValid)
+        XCTAssertTrue(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your username is incorrect. Please, try again.")
+    }
+    
+    func testPasswordWithOnlyNumbers() {
+        let user = User.mockPasswordWithOnlyNumbers()
+        viewModel.username = user.username
+        viewModel.password = user.password
+        
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+    }
+    
 }

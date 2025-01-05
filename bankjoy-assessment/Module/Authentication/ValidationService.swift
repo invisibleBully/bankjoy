@@ -32,17 +32,28 @@ class ValidationService: ValidationServiceType {
     }
     
     func validateUsername(_ username: String) -> AnyPublisher<ValidationResult, Never> {
-        let result = validator.validate(username, with: ValidationConstants.Patterns.username, message: ValidationConstants.Messages.username)
+        if username.isEmpty {
+            return Just(.failure(ValidationConstants.Messages.username)).eraseToAnyPublisher()
+        }
+        
+        if CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: username)) {
+            return Just(.failure(ValidationConstants.Messages.username)).eraseToAnyPublisher()
+        }
+        
+        let result = validator.validate(username,
+                                        with: ValidationConstants.Patterns.username,
+                                        message: ValidationConstants.Messages.username)
         return Just(result).eraseToAnyPublisher()
     }
     
     func validatePassword(_ password: String) -> AnyPublisher<ValidationResult, Never> {
-        let result = validator.validate(password, with: ValidationConstants.Patterns.password, message: ValidationConstants.Messages.password)
+        if password.isEmpty {
+            return Just(.failure(ValidationConstants.Messages.password)).eraseToAnyPublisher()
+        }
+        
+        let result = validator.validate(password,
+                                        with: ValidationConstants.Patterns.password,
+                                        message: ValidationConstants.Messages.password)
         return Just(result).eraseToAnyPublisher()
     }
 }
-
-
-
-
-
