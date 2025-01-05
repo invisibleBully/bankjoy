@@ -50,5 +50,27 @@ extension User {
             password: "Val1d!"
         )
     }
+    
+    static func mockEmptyUserName() -> User {
+        return User(
+            username: "",
+            password: "$Adm1n!@2023"
+        )
+    }
+    
+    static func mockEmptyPassword() -> User {
+        return User(
+            username: "validUser",
+            password: ""
+        )
+    }
+    
+    static func mockEmptyUserNameAndPassword() -> User {
+        return User(
+            username: "",
+            password: ""
+        )
+    }
+    
 }
 

@@ -24,12 +24,12 @@ class MockValidationService: ValidationServiceType {
     }
     
     func validateUsername(_ username: String) -> AnyPublisher<ValidationResult, Never> {
-        return Just(validator.validate(username, with: ValidationConstants.Patterns.username, message: ValidationConstants.Messages.message))
+        return Just(validator.validate(username, with: ValidationConstants.Patterns.username, message: ValidationConstants.Messages.username))
             .eraseToAnyPublisher()
     }
     
     func validatePassword(_ password: String) -> AnyPublisher<ValidationResult, Never> {
-        return Just(validator.validate(password, with: ValidationConstants.Patterns.password, message: ValidationConstants.Messages.message))
+        return Just(validator.validate(password, with: ValidationConstants.Patterns.password, message: ValidationConstants.Messages.password))
             .eraseToAnyPublisher()
     }
 }

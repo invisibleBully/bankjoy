@@ -16,7 +16,9 @@ class AppCoordinator {
     }
 
     func start() {
-        let loginViewController = LoginViewController()
+        let validationService = ValidationService()
+        let loginViewModel = LoginViewModel(validationService: validationService)
+        let loginViewController = LoginViewController(viewModel: loginViewModel)
         window?.rootViewController = loginViewController
         window?.makeKeyAndVisible()
     }

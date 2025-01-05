@@ -17,7 +17,6 @@
   },
   "testTargets" : [
     {
-      "enabled" : false,
       "parallelizable" : false,
       "target" : {
         "containerPath" : "container:bankjoy-assessment.xcodeproj",

@@ -9,7 +9,7 @@ import XCTest
 import Combine
 @testable import bankjoy_assessment
 
-class LoginiewModelTests: XCTestCase {
+class LoginViewModelTests: XCTestCase {
     
     var viewModel: LoginViewModel!
     var cancellables: Set<AnyCancellable>!
@@ -33,7 +33,8 @@ class LoginiewModelTests: XCTestCase {
         viewModel.username = user.username
         viewModel.password = user.password
         
-        XCTAssertTrue(viewModel.isValid)
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertTrue(viewModel.isPasswordValid)
         XCTAssertEqual(viewModel.alertMessage, "")
     }
     
@@ -42,8 +43,9 @@ class LoginiewModelTests: XCTestCase {
         viewModel.username = user.username
         viewModel.password = user.password
         
-        XCTAssertFalse(viewModel.isValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username or password is incorrect. Please, try again.")
+        XCTAssertFalse(viewModel.isUsernameValid)
+        XCTAssertTrue(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your username is incorrect. Please, try again.")
     }
     
     func testInvalidPassword() {
@@ -51,8 +53,9 @@ class LoginiewModelTests: XCTestCase {
         viewModel.username = user.username
         viewModel.password = user.password
         
-        XCTAssertFalse(viewModel.isValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username or password is incorrect. Please, try again.")
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
     }
     
     func testPasswordWithoutSpecialCharacter() {
@@ -60,8 +63,9 @@ class LoginiewModelTests: XCTestCase {
         viewModel.username = user.username
         viewModel.password = user.password
         
-        XCTAssertFalse(viewModel.isValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username or password is incorrect. Please, try again.")
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
     }
     
     func testPasswordWithoutNumber() {
@@ -69,8 +73,9 @@ class LoginiewModelTests: XCTestCase {
         viewModel.username = user.username
         viewModel.password = user.password
         
-        XCTAssertFalse(viewModel.isValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username or password is incorrect. Please, try again.")
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
     }
     
     func testShortPassword() {
@@ -78,7 +83,39 @@ class LoginiewModelTests: XCTestCase {
         viewModel.username = user.username
         viewModel.password = user.password
         
-        XCTAssertFalse(viewModel.isValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username or password is incorrect. Please, try again.")
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+    }
+    
+    func testEmptyUsername() {
+        let user = User.mockEmptyUserName()
+        viewModel.username = user.username
+        viewModel.password = user.password
+        
+        XCTAssertFalse(viewModel.isUsernameValid)
+        XCTAssertTrue(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your username is incorrect. Please, try again.")
+    }
+    
+    func testEmptyPassword() {
+        let user = User.mockEmptyPassword()
+        viewModel.username = user.username
+        viewModel.password = user.password
+        
+        XCTAssertTrue(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+    }
+    
+    
+    func testEmptyUsernameAndPassword() {
+        let user = User.mockEmptyUserNameAndPassword()
+        viewModel.username = user.username
+        viewModel.password = user.password
+        
+        XCTAssertFalse(viewModel.isUsernameValid)
+        XCTAssertFalse(viewModel.isPasswordValid)
+        XCTAssertEqual(viewModel.alertMessage, "Your username and password are incorrect. Please, try again.")
     }
 }

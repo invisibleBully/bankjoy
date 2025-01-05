@@ -19,17 +19,8 @@ struct ValidationConstants {
     }
     
     struct Messages {
-        static let message = "Your username or password is incorrect. Please, try again."
-    }
-}
-
-protocol ValidatorType {
-    func validate(_ value: String, with pattern: String, message: String) -> ValidationResult
-}
-
-class Validator: ValidatorType {
-    func validate(_ value: String, with pattern: String, message: String) -> ValidationResult {
-        let predicate = NSPredicate(format: "SELF MATCHES %@", pattern)
-        return predicate.evaluate(with: value) ? .success : .failure(message)
+        static let username = "Your username is incorrect. Please, try again."
+        static let password = "Your password is incorrect. Please, try again."
+        static let usernameAndPassword = "Your username and password are incorrect. Please, try again."
     }
 }

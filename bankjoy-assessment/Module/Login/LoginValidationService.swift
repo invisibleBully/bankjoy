@@ -8,6 +8,17 @@
 import Foundation
 import Combine
 
+protocol ValidatorType {
+    func validate(_ value: String, with pattern: String, message: String) -> ValidationResult
+}
+
+class Validator: ValidatorType {
+    func validate(_ value: String, with pattern: String, message: String) -> ValidationResult {
+        let predicate = NSPredicate(format: "SELF MATCHES %@", pattern)
+        return predicate.evaluate(with: value) ? .success : .failure(message)
+    }
+}
+
 protocol ValidationServiceType {
     func validateUsername(_ username: String) -> AnyPublisher<ValidationResult, Never>
     func validatePassword(_ password: String) -> AnyPublisher<ValidationResult, Never>
@@ -16,23 +27,18 @@ protocol ValidationServiceType {
 class ValidationService: ValidationServiceType {
     private let validator: ValidatorType
     
-    init(validator: ValidatorType) {
+    init(validator: ValidatorType = Validator()) {
         self.validator = validator
     }
     
-    private struct Patterns {
-        static let username = "[A-Za-z0-9_]{5,}"
-        static let password = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*]).{8,}$"
-    }
-    
     func validateUsername(_ username: String) -> AnyPublisher<ValidationResult, Never> {
-        return Just(validator.validate(username, with: Patterns.username, message: ValidationConstants.Messages.message))
-            .eraseToAnyPublisher()
+        let result = validator.validate(username, with: ValidationConstants.Patterns.username, message: ValidationConstants.Messages.username)
+        return Just(result).eraseToAnyPublisher()
     }
     
     func validatePassword(_ password: String) -> AnyPublisher<ValidationResult, Never> {
-        return Just(validator.validate(password, with: Patterns.password, message: ValidationConstants.Messages.message))
-            .eraseToAnyPublisher()
+        let result = validator.validate(password, with: ValidationConstants.Patterns.password, message: ValidationConstants.Messages.password)
+        return Just(result).eraseToAnyPublisher()
     }
 }
 
