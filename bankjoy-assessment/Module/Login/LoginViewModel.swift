@@ -8,8 +8,6 @@
 import Foundation
 import Combine
 
-import Combine
-
 class LoginViewModel: ObservableObject {
     
     @Published var username: String = ""
@@ -31,6 +29,7 @@ class LoginViewModel: ObservableObject {
             }
             .sink { [weak self] validationResult in
                 self?.handleUsernameValidationResult(validationResult)
+                self?.validatePasswordIfNeeded()
             }
             .store(in: &cancellables)
         
@@ -41,6 +40,7 @@ class LoginViewModel: ObservableObject {
             }
             .sink { [weak self] validationResult in
                 self?.handlePasswordValidationResult(validationResult)
+                self?.validateUsernameIfNeeded()
             }
             .store(in: &cancellables)
     }
@@ -80,6 +80,22 @@ class LoginViewModel: ObservableObject {
             self.isPasswordValid = false
         }
         updateAlertMessage()
+    }
+    
+    private func validatePasswordIfNeeded() {
+        let passwordPublisher = validatePassword(password)
+        passwordPublisher.sink { [weak self] validationResult in
+            self?.handlePasswordValidationResult(validationResult)
+        }
+        .store(in: &cancellables)
+    }
+    
+    private func validateUsernameIfNeeded() {
+        let usernamePublisher = validateUsername(username)
+        usernamePublisher.sink { [weak self] validationResult in
+            self?.handleUsernameValidationResult(validationResult)
+        }
+        .store(in: &cancellables)
     }
     
     private func updateAlertMessage() {
