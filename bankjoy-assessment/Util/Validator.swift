@@ -19,8 +19,9 @@ struct ValidationConstants {
     }
     
     struct Messages {
-        static let username = "Your username is incorrect. Please, try again."
-        static let password = "Your password is incorrect. Please, try again."
-        static let usernameAndPassword = "Your username and password are incorrect. Please, try again."
+        static let username = "Your username must be at least 5 characters and include only letters, numbers, or underscores."
+        static let password = "Your password must be 8+ characters with an uppercase, lowercase, number, and special character."
+        static let usernameAndPassword = "Username: 5+ chars (letters, numbers, _). Password: 8+ chars, mix of cases, number, special char."
+
     }
 }

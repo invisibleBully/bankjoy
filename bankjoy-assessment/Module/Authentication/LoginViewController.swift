@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
     
     private lazy var usernameTextField: UITextField = {
         let textField = UITextField()
+        textField.delegate = self
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "eg. _a_user234"
         textField.borderStyle = .none
@@ -49,6 +50,7 @@ class LoginViewController: UIViewController {
     
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
+        textField.delegate = self
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "eg. $Adm1n!@0000"
         textField.isSecureTextEntry = true
@@ -329,5 +331,12 @@ class LoginViewController: UIViewController {
         } else if textField == passwordTextField {
             viewModel.password = textField.text ?? ""
         }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

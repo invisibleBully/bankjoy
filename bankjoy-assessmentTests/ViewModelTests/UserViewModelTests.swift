@@ -45,7 +45,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertFalse(viewModel.isUsernameValid)
         XCTAssertTrue(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your username must be at least 5 characters and include only letters, numbers, or underscores.")
     }
     
     func testInvalidPassword() {
@@ -55,7 +55,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your password must be 8+ characters with an uppercase, lowercase, number, and special character.")
     }
     
     func testPasswordWithoutSpecialCharacter() {
@@ -65,7 +65,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your password must be 8+ characters with an uppercase, lowercase, number, and special character.")
     }
     
     func testPasswordWithoutNumber() {
@@ -75,7 +75,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your password must be 8+ characters with an uppercase, lowercase, number, and special character.")
     }
     
     func testShortPassword() {
@@ -85,7 +85,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your password must be 8+ characters with an uppercase, lowercase, number, and special character.")
     }
     
     func testEmptyUsername() {
@@ -95,7 +95,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertFalse(viewModel.isUsernameValid)
         XCTAssertTrue(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your username must be at least 5 characters and include only letters, numbers, or underscores.")
     }
     
     func testEmptyPassword() {
@@ -105,7 +105,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your password must be 8+ characters with an uppercase, lowercase, number, and special character.")
     }
     
     
@@ -116,7 +116,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertFalse(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username and password are incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Username: 5+ chars (letters, numbers, _). Password: 8+ chars, mix of cases, number, special char.")
     }
     
     func testUsernameWithSpecialCharacters() {
@@ -126,7 +126,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertFalse(viewModel.isUsernameValid)
         XCTAssertTrue(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your username is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your username must be at least 5 characters and include only letters, numbers, or underscores.")
     }
     
     func testPasswordWithOnlyNumbers() {
@@ -136,7 +136,7 @@ class UserViewModelTests: XCTestCase {
         
         XCTAssertTrue(viewModel.isUsernameValid)
         XCTAssertFalse(viewModel.isPasswordValid)
-        XCTAssertEqual(viewModel.alertMessage, "Your password is incorrect. Please, try again.")
+        XCTAssertEqual(viewModel.alertMessage, "Your password must be 8+ characters with an uppercase, lowercase, number, and special character.")
     }
     
 }
