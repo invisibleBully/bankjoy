@@ -94,6 +94,7 @@
 		2C22BB612D2A74FB00E8F3A2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2C7805602D2A3E3E00418A04 /* ValidationService.swift */,
 				2C7805632D2A3E3E00418A04 /* Validator.swift */,
 			);
 			path = Util;
@@ -168,7 +169,6 @@
 		2C7805642D2A3E3E00418A04 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				2C7805602D2A3E3E00418A04 /* ValidationService.swift */,
 				2C7805612D2A3E3E00418A04 /* LoginViewController.swift */,
 				2C7805622D2A3E3E00418A04 /* UserViewModel.swift */,
 			);

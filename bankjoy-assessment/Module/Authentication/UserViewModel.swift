@@ -24,7 +24,7 @@ class UserViewModel: ObservableObject {
         setupBinding()
     }
     
-    private func setupBinding(){
+    private func setupBinding() {
         $username
             .dropFirst()
             .flatMap { [unowned self] username in
@@ -77,19 +77,19 @@ class UserViewModel: ObservableObject {
     }
     
     private func validatePasswordIfNeeded() {
-        let passwordPublisher = validatePassword(password)
-        passwordPublisher.sink { [weak self] validationResult in
-            self?.handlePasswordValidationResult(validationResult)
-        }
-        .store(in: &cancellables)
+        validatePassword(password)
+            .sink { [weak self] validationResult in
+                self?.handlePasswordValidationResult(validationResult)
+            }
+            .store(in: &cancellables)
     }
     
     private func validateUsernameIfNeeded() {
-        let usernamePublisher = validateUsername(username)
-        usernamePublisher.sink { [weak self] validationResult in
-            self?.handleUsernameValidationResult(validationResult)
-        }
-        .store(in: &cancellables)
+        validateUsername(username)
+            .sink { [weak self] validationResult in
+                self?.handleUsernameValidationResult(validationResult)
+            }
+            .store(in: &cancellables)
     }
     
     private func updateAlertMessage() {
