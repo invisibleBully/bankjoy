@@ -1,10 +1,10 @@
 # BankJoy iOS Assessment Project
 
 <div style="display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: center;">
-    <img src="https://github.com/user-attachments/assets/697a81a0-fcb8-41f4-9222-dd1f6822d072" alt="Screenshot 1" style="width: 20%; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/85fdb30d-a7b8-43f8-a960-a0269f01f1ad" alt="Screenshot 2" style="width: 20%; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/66aba475-803c-4b87-830d-99ca1cf8d5c7" alt="Screenshot 4" style="width: 20%; margin-right: 10px;" />
-    <img src="https://github.com/user-attachments/assets/3077eaf4-a0a3-4756-b9b3-5a33900a0c45" alt="Screenshot 5" style="width: 20%;" />
+    <img src="https://github.com/user-attachments/assets/825ca856-001d-408c-bd1f-08ba7bfbb9ad" alt="Screenshot 1" style="width: 20%; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/f06e0ff0-d96e-4952-9949-c764ad21b8cd" alt="Screenshot 2" style="width: 20%; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/d9b7a99a-2ba3-429f-bd9b-e91960260a79" alt="Screenshot 3" style="width: 20%; margin-right: 10px;" />
+    <img src="https://github.com/user-attachments/assets/cee97e97-9bef-401e-b667-3c950e0d7369" alt="Screenshot 4" style="width: 20%;" />
 </div>
 
 ## Overview
