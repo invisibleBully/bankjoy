@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "9C955CC2-DE68-44FE-B849-700DD1C30C64",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:bankjoy-assessment.xcodeproj",
+      "identifier" : "2C7333092D2A24A600A943F3",
+      "name" : "bankjoy-assessment"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:bankjoy-assessment.xcodeproj",
+        "identifier" : "2C73331F2D2A24A800A943F3",
+        "name" : "bankjoy-assessmentTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:bankjoy-assessment.xcodeproj",
+        "identifier" : "2C7333292D2A24A800A943F3",
+        "name" : "bankjoy-assessmentUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

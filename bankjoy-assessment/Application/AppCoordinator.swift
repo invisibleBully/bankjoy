@@ -10,14 +10,15 @@ import UIKit
 
 class AppCoordinator {
     var window: UIWindow?
-
+    
     init(window: UIWindow?) {
         self.window = window
     }
-
+    
     func start() {
-        let loginViewController = LoginViewController()
-        window?.rootViewController = loginViewController
+        let validationService = ValidationService()
+        let userViewModel = UserViewModel(validationService: validationService)
+        window?.rootViewController = LoginViewController(viewModel: userViewModel)
         window?.makeKeyAndVisible()
     }
 }

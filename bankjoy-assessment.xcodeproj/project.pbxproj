@@ -3,8 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		2C22BB632D2B04A200E8F3A2 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C22BB622D2B04A200E8F3A2 /* ValidationServiceTests.swift */; };
+		2C7805582D2A3E3500418A04 /* MockValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805552D2A3E3500418A04 /* MockValidationService.swift */; };
+		2C78056C2D2A3E3E00418A04 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805592D2A3E3E00418A04 /* AppCoordinator.swift */; };
+		2C78056D2D2A3E3E00418A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78055A2D2A3E3E00418A04 /* AppDelegate.swift */; };
+		2C78056E2D2A3E3E00418A04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78055B2D2A3E3E00418A04 /* SceneDelegate.swift */; };
+		2C78056F2D2A3E3E00418A04 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78055E2D2A3E3E00418A04 /* User.swift */; };
+		2C7805702D2A3E3E00418A04 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805602D2A3E3E00418A04 /* ValidationService.swift */; };
+		2C7805712D2A3E3E00418A04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805612D2A3E3E00418A04 /* LoginViewController.swift */; };
+		2C7805722D2A3E3E00418A04 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805622D2A3E3E00418A04 /* UserViewModel.swift */; };
+		2C7805732D2A3E3E00418A04 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805632D2A3E3E00418A04 /* Validator.swift */; };
+		2C7805742D2A3E3E00418A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7805662D2A3E3E00418A04 /* Assets.xcassets */; };
+		2C7805752D2A3E3E00418A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7805682D2A3E3E00418A04 /* LaunchScreen.storyboard */; };
+		2C78057A2D2A3E4700418A04 /* bankjoy_assessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805772D2A3E4700418A04 /* bankjoy_assessmentUITests.swift */; };
+		2C78057B2D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805782D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift */; };
+		2C78057F2D2A400D00418A04 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78057E2D2A400D00418A04 /* UserViewModelTests.swift */; };
+		2C7805852D2A50C900418A04 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7805842D2A50C900418A04 /* MockUser.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2C7333212D2A24A800A943F3 /* PBXContainerItemProxy */ = {
@@ -24,41 +43,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C22BB622D2B04A200E8F3A2 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		2C73330A2D2A24A600A943F3 /* bankjoy-assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankjoy-assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7333202D2A24A800A943F3 /* bankjoy-assessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bankjoy-assessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C73332A2D2A24A800A943F3 /* bankjoy-assessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bankjoy-assessmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C7805552D2A3E3500418A04 /* MockValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockValidationService.swift; sourceTree = "<group>"; };
+		2C7805592D2A3E3E00418A04 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2C78055A2D2A3E3E00418A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C78055B2D2A3E3E00418A04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2C78055E2D2A3E3E00418A04 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C7805602D2A3E3E00418A04 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		2C7805612D2A3E3E00418A04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C7805622D2A3E3E00418A04 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		2C7805632D2A3E3E00418A04 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		2C7805662D2A3E3E00418A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C7805672D2A3E3E00418A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C78056A2D2A3E3E00418A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C7805772D2A3E4700418A04 /* bankjoy_assessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankjoy_assessmentUITests.swift; sourceTree = "<group>"; };
+		2C7805782D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankjoy_assessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C78057E2D2A400D00418A04 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		2C7805812D2A436000418A04 /* bankjoy-assessment.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bankjoy-assessment.xctestplan"; sourceTree = "<group>"; };
+		2C7805842D2A50C900418A04 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2C7333322D2A24A800A943F3 /* Exceptions for "bankjoy-assessment" folder in "bankjoy-assessment" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 2C7333092D2A24A600A943F3 /* bankjoy-assessment */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2C73330C2D2A24A600A943F3 /* bankjoy-assessment */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2C7333322D2A24A800A943F3 /* Exceptions for "bankjoy-assessment" folder in "bankjoy-assessment" target */,
-			);
-			path = "bankjoy-assessment";
-			sourceTree = "<group>";
-		};
-		2C7333232D2A24A800A943F3 /* bankjoy-assessmentTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "bankjoy-assessmentTests";
-			sourceTree = "<group>";
-		};
-		2C73332D2D2A24A800A943F3 /* bankjoy-assessmentUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "bankjoy-assessmentUITests";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C7333072D2A24A600A943F3 /* Frameworks */ = {
@@ -85,12 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C22BB612D2A74FB00E8F3A2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805602D2A3E3E00418A04 /* ValidationService.swift */,
+				2C7805632D2A3E3E00418A04 /* Validator.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		2C7333012D2A24A500A943F3 = {
 			isa = PBXGroup;
 			children = (
-				2C73330C2D2A24A600A943F3 /* bankjoy-assessment */,
-				2C7333232D2A24A800A943F3 /* bankjoy-assessmentTests */,
-				2C73332D2D2A24A800A943F3 /* bankjoy-assessmentUITests */,
+				2C7805812D2A436000418A04 /* bankjoy-assessment.xctestplan */,
+				2C78056B2D2A3E3E00418A04 /* bankjoy-assessment */,
+				2C7805572D2A3E3500418A04 /* bankjoy-assessmentTests */,
+				2C7805792D2A3E4700418A04 /* bankjoy-assessmentUITests */,
 				2C73330B2D2A24A600A943F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +119,99 @@
 				2C73332A2D2A24A800A943F3 /* bankjoy-assessmentUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2C7805542D2A3E3500418A04 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C78057E2D2A400D00418A04 /* UserViewModelTests.swift */,
+				2C22BB622D2B04A200E8F3A2 /* ValidationServiceTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		2C7805562D2A3E3500418A04 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805552D2A3E3500418A04 /* MockValidationService.swift */,
+				2C7805842D2A50C900418A04 /* MockUser.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		2C7805572D2A3E3500418A04 /* bankjoy-assessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805542D2A3E3500418A04 /* ViewModelTests */,
+				2C7805562D2A3E3500418A04 /* Mock */,
+			);
+			path = "bankjoy-assessmentTests";
+			sourceTree = "<group>";
+		};
+		2C78055C2D2A3E3E00418A04 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805592D2A3E3E00418A04 /* AppCoordinator.swift */,
+				2C78055A2D2A3E3E00418A04 /* AppDelegate.swift */,
+				2C78055B2D2A3E3E00418A04 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2C78055F2D2A3E3E00418A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C78055E2D2A3E3E00418A04 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C7805642D2A3E3E00418A04 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805612D2A3E3E00418A04 /* LoginViewController.swift */,
+				2C7805622D2A3E3E00418A04 /* UserViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		2C7805652D2A3E3E00418A04 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805642D2A3E3E00418A04 /* Authentication */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2C7805692D2A3E3E00418A04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805662D2A3E3E00418A04 /* Assets.xcassets */,
+				2C7805682D2A3E3E00418A04 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2C78056B2D2A3E3E00418A04 /* bankjoy-assessment */ = {
+			isa = PBXGroup;
+			children = (
+				2C78056A2D2A3E3E00418A04 /* Info.plist */,
+				2C78055C2D2A3E3E00418A04 /* Application */,
+				2C78055F2D2A3E3E00418A04 /* Model */,
+				2C7805652D2A3E3E00418A04 /* Module */,
+				2C7805692D2A3E3E00418A04 /* Resource */,
+				2C22BB612D2A74FB00E8F3A2 /* Util */,
+			);
+			path = "bankjoy-assessment";
+			sourceTree = "<group>";
+		};
+		2C7805792D2A3E4700418A04 /* bankjoy-assessmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C7805772D2A3E4700418A04 /* bankjoy_assessmentUITests.swift */,
+				2C7805782D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift */,
+			);
+			path = "bankjoy-assessmentUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +228,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2C73330C2D2A24A600A943F3 /* bankjoy-assessment */,
 			);
 			name = "bankjoy-assessment";
 			packageProductDependencies = (
@@ -143,9 +249,6 @@
 			dependencies = (
 				2C7333222D2A24A800A943F3 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				2C7333232D2A24A800A943F3 /* bankjoy-assessmentTests */,
-			);
 			name = "bankjoy-assessmentTests";
 			packageProductDependencies = (
 			);
@@ -165,9 +268,6 @@
 			);
 			dependencies = (
 				2C73332C2D2A24A800A943F3 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				2C73332D2D2A24A800A943F3 /* bankjoy-assessmentUITests */,
 			);
 			name = "bankjoy-assessmentUITests";
 			packageProductDependencies = (
@@ -200,6 +300,7 @@
 				};
 			};
 			buildConfigurationList = 2C7333052D2A24A600A943F3 /* Build configuration list for PBXProject "bankjoy-assessment" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -208,7 +309,6 @@
 			);
 			mainGroup = 2C7333012D2A24A500A943F3;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 2C73330B2D2A24A600A943F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +325,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7805742D2A3E3E00418A04 /* Assets.xcassets in Resources */,
+				2C7805752D2A3E3E00418A04 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C78056C2D2A3E3E00418A04 /* AppCoordinator.swift in Sources */,
+				2C78056D2D2A3E3E00418A04 /* AppDelegate.swift in Sources */,
+				2C78056E2D2A3E3E00418A04 /* SceneDelegate.swift in Sources */,
+				2C78056F2D2A3E3E00418A04 /* User.swift in Sources */,
+				2C7805702D2A3E3E00418A04 /* ValidationService.swift in Sources */,
+				2C7805712D2A3E3E00418A04 /* LoginViewController.swift in Sources */,
+				2C7805722D2A3E3E00418A04 /* UserViewModel.swift in Sources */,
+				2C7805732D2A3E3E00418A04 /* Validator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +366,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C78057F2D2A400D00418A04 /* UserViewModelTests.swift in Sources */,
+				2C7805852D2A50C900418A04 /* MockUser.swift in Sources */,
+				2C22BB632D2B04A200E8F3A2 /* ValidationServiceTests.swift in Sources */,
+				2C7805582D2A3E3500418A04 /* MockValidationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +377,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C78057A2D2A3E4700418A04 /* bankjoy_assessmentUITests.swift in Sources */,
+				2C78057B2D2A3E4700418A04 /* bankjoy_assessmentUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +396,17 @@
 			targetProxy = 2C73332B2D2A24A800A943F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C7805682D2A3E3E00418A04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C7805672D2A3E3E00418A04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C7333342D2A24A800A943F3 /* Debug */ = {
