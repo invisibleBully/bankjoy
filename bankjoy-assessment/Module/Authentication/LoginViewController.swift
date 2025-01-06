@@ -121,6 +121,9 @@ class LoginViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 18
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.layer.masksToBounds = true
         return view
     }()
     
@@ -191,7 +194,7 @@ class LoginViewController: UIViewController {
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundImageView.bottomAnchor.constraint(equalTo: containerView.topAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
             
             containerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
